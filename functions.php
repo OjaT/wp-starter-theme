@@ -185,6 +185,23 @@ function addMeta() {
 add_action('meta', 'addMeta');
 
 
+// Add GA ( acf fields / options page )
+
+function addGA() {
+	
+	if( class_exists('acf') ) {
+		$acode = get_field('analytics_code', 'option');
+	}
+
+	if ( $acode ) {
+		echo $acode; 
+	}
+	
+}
+
+add_action('analytics', 'addGA');
+
+
 
 //Remove comments in its entirety
 

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php do_action('meta'); ?> 
 <?php wp_head(); ?>
-<?php if ( get_field('analytics_code', 'option') ) { the_field('analytics_code', 'option'); } ?> 
+<?php do_action('analytics'); ?> 
 </head>
 <body <?php dynamicBodyID() ?>>
 <header class="header">
