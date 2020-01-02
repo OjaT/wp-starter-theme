@@ -1,107 +1,123 @@
-@font-face {
-  font-family: 'Helvetica';
-  src: url("../fonts/regular/helvetica_55_roman-webfont.woff") format("woff"), url("../fonts/regular/helvetica_55_roman-webfont.ttf") format("truetype");
-  font-weight: normal; }
-
-@font-face {
-  font-family: 'Helvetica';
-  src: url("../fonts/bold/helveticaneueltstd-bd-webfont.woff") format("woff"), url("../fonts/bold/helveticaneueltstd-bd-webfont.ttf") format("truetype");
-  font-weight: bold; }
-
-html {
-  height: 100%;
-  min-height: 100%; }
-
 body {
   margin: 0;
-  font-family: 'Helvetica';
+  font-family: "Raleway", sans-serif;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 1;
-  height: 100%;
-  min-height: 100%; }
+  font-size: 24px;
+  color: #333333;
+  line-height: 1; }
+  @media (max-width: 765px) {
+    body {
+      font-size: 18px; } }
+
+main {
+  display: block; }
 
 * {
   box-sizing: border-box; }
 
 a {
   text-decoration: none;
-  color: #000; }
+  color: #333333; }
 
 p {
   line-height: 32px; }
+  @media (max-width: 765px) {
+    p {
+      line-height: 30px; } }
 
 ul {
   margin: 0;
   padding: 0;
   list-style: none; }
 
-h1 {
-  font-weight: normal;
+h1, h2, h3 {
   margin: 0; }
 
-h2 {
-  font-weight: normal;
-  margin: 0; }
+h1 {
+  font-size: 60px;
+  line-height: 45px; }
 
 .logo {
   display: block;
-  width: 150px;
-  height: 150px;
+  width: 108px;
+  height: 117px;
   background-size: cover;
   background-image: url("../img/logo.svg");
   background-repeat: no-repeat;
-  background-position: center; }
-
-.icon {
-  display: inline-block;
-  vertical-align: top;
-  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; }
-  .icon.mobile-nav {
-    width: 30px;
-    height: 35px;
-    background-image: url("../img/mobile.svg"); }
+  background-size: contain; }
+
+#mob-nav {
+  display: none; }
+  @media (max-width: 765px) {
+    #mob-nav {
+      display: block; } }
 
 .flex-container {
   display: flex; }
 
 .container {
-  max-width: 1560px;
+  max-width: 1410px;
   margin: 0 auto; }
-  @media (max-width: 1535px) {
+  @media (max-width: 1660px) {
     .container {
-      max-width: 1410px; } }
+      max-width: 1230px; } }
   @media (max-width: 1439px) {
     .container {
-      max-width: 1240px; } }
+      max-width: 1150px; } }
   @media (max-width: 1279px) {
     .container {
-      max-width: 1000px; } }
+      max-width: 900px; } }
   @media (max-width: 1015px) {
     .container {
-      max-width: 748px; } }
-  @media (max-width: 767px) {
-    .container {
       max-width: 700px; } }
-  @media (max-width: 375px) {
+  @media (max-width: 765px) {
+    .container {
+      max-width: 100%;
+      margin: 0 30px; } }
+  @media (max-width: 320px) {
     .container {
       max-width: 320px; } }
 
-nav:after {
+header .menu ul li {
+  float: left;
+  position: relative;
+  margin-right: 28px; }
+  header .menu ul li:last-of-type {
+    margin-right: 0; }
+  @media (max-width: 1279px) {
+    header .menu ul li {
+      float: none;
+      margin-right: 0;
+      margin-bottom: 35px; } }
+  header .menu ul li a {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333333;
+    -webkit-transition: color 0.1s linear;
+    -moz-transition: color 0.1s linear;
+    -ms-transition: color 0.1s linear;
+    -o-transition: color 0.1s linear;
+    transition: color 0.1s linear; }
+    @media (max-width: 1279px) {
+      header .menu ul li a {
+        font-size: 16px; } }
+
+header .menu ul:after {
   content: "";
   display: block;
   clear: both; }
 
-.menu ul li {
-  float: left;
-  margin-right: 20px; }
-  .menu ul li:last-of-type {
-    margin-right: 0; }
-  .menu ul li a {
-    color: #000; }
-
-main {
-  display: block;
-  margin-top: 40px; }
+header .lang-select {
+  display: flex; }
+  header .lang-select a {
+    font-size: 20px;
+    text-align: center;
+    -webkit-transition: color 0.1s linear;
+    -moz-transition: color 0.1s linear;
+    -ms-transition: color 0.1s linear;
+    -o-transition: color 0.1s linear;
+    transition: color 0.1s linear; }
+    header .lang-select a.active {
+      color: #fff; }

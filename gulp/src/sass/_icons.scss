@@ -1,0 +1,12 @@
+.icon {
+	display: inline-block;
+	vertical-align: top;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	&.mobile-nav {
+		width: 30px;
+		height: 35px;
+		background-image: url('../img/mobile.svg');
+	}
+}

@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'Times';
+	src: url('../fonts/Times-Roman.woff2') format('woff2'),
+		 url('../fonts/Times-Roman.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;  
+}
+
+@font-face {
+	font-family: 'Times-Bold';
+  	src:url('../fonts/Times-Bold.woff2') format('woff2'),
+        url('../fonts/Times-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;  
+}
+
+@font-face {
+	font-family: 'Times-Italic';
+  	src:url('../fonts/Times-Italic.woff2') format('woff2'),
+        url('../fonts/Times-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;  
+}
+

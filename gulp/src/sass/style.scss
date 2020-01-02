@@ -1,0 +1,196 @@
+@import 'mixins';
+//@import 'fonts';
+
+$main: #333333;
+$fontMain: 'Raleway', sans-serif;
+
+html {
+	//height: 100%;
+	//min-height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: $fontMain;
+	font-weight: normal;
+	font-size: 24px;
+	color: $main;
+	line-height: 1;
+	//height: 100%;
+	//min-height: 100%;
+
+	@include breakpoint(mobileLarge){
+		font-size: 18px;
+	}
+
+}
+
+main {
+	display: block;
+}
+
+* {
+	box-sizing: border-box; 
+}
+
+a {
+	text-decoration: none;
+	color: $main;
+}
+
+p {
+	line-height: 32px;
+	@include breakpoint(mobileLarge){
+		line-height: 30px;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+h1, h2, h3 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 60px;
+	line-height: 45px;
+}
+
+
+.logo {
+	display: block;
+	width: 108px;
+	height: 117px;
+	background-size: cover;
+	background-image: url('../img/logo.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+
+#mob-nav {
+	display: none;
+	@include breakpoint(mobileLarge){
+		display: block;
+	}	
+}
+
+
+//@import 'icons';
+
+
+.flex-container {
+	display: flex;
+}
+
+
+// @import 'form';
+
+
+.container {
+	max-width: 1410px;
+	margin: 0 auto;
+	@include breakpoint(laptop){
+		max-width: 1230px;
+	}
+	@include breakpoint(laptopSmall){
+		max-width: 1150px;
+	}
+	@include breakpoint(tabletHor){
+		max-width: 900px;
+	}
+	@include breakpoint(tabletVer){
+		max-width: 700px;
+	}
+	@include breakpoint(mobileLarge){
+		max-width: 100%;
+		margin: 0 30px;
+	}
+	@include breakpoint(mobileSmall){
+		max-width: 320px;
+	}
+	.inner {
+		//margin: 0 30px;
+	}	
+}
+
+header {
+
+	.container {
+	}
+
+	.menu {
+
+		ul {
+
+			li {
+				float: left;
+				position: relative;
+				margin-right: 28px;
+				&:last-of-type {
+					margin-right: 0;
+				}
+
+				@include breakpoint(tabletHor){
+					float: none;
+					margin-right: 0;
+					margin-bottom: 35px;
+				}
+				a {
+					font-size: 18px;
+					text-transform: uppercase;
+					font-weight: bold;
+					color: $main;
+					@include transition (color, .1s, linear);
+					&:hover {
+
+					}
+					@include breakpoint(tabletHor){
+						font-size: 16px;
+
+					}
+					html:lang(en-US) & {
+
+					}	
+				}
+				&.current-menu-item {
+					&:after {
+
+						@include breakpoint(tabletHor){
+
+						}
+					}
+				}
+
+			}
+			@include clearfix;
+		}
+	}
+
+	.lang-select {
+		display: flex;
+		a {
+			font-size: 20px;
+			text-align: center;
+			@include transition (color, .1s, linear);
+			
+			&.active {
+				color: #fff;
+			}
+
+			&:hover {
+				&:not(.active) {
+
+				}
+
+			}
+		}
+	}	
+
+}

@@ -1,0 +1,125 @@
+// Box shadow
+@mixin box-shadow($horizontal, $vertical, $blur, $spread, $color) {
+	-webkit-box-shadow: $horizontal $vertical $blur $spread $color;
+	-moz-box-shadow: $horizontal $vertical $blur $spread $color;
+	box-shadow: $horizontal $vertical $blur $spread $color;
+}
+
+// Transitions
+@mixin transition($what, $time, $how) {
+	-webkit-transition: $what $time $how;
+	-moz-transition: $what $time $how;
+	-ms-transition: $what $time $how;
+	-o-transition: $what $time $how;
+	transition: $what $time $how;
+}
+
+//Clearfix
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+//After general
+@mixin after {
+	&:after {
+		content: "";
+		display: block;
+	}
+}
+
+//After icon
+@mixin afterIcon {
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		background-image: url('../img/arrow-right.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+}
+
+//Before general
+@mixin before {
+	&:before{
+		content: "";
+		display: block;
+	}
+}
+
+//Before general
+@mixin beforeIcon {
+	&:before{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		background-image: url('../img/arrow-right.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+
+}
+
+//Backgroundimage
+// @mixin back {
+// 	background-image: url('');
+// 	background-repeat: no-repeat;
+// 	background-position: center;
+// 	background-size: contain;
+// }
+
+
+@mixin breakpoint($point) {
+	@if $point == desktopWide {
+		@media (max-width: 2560px) { @content ; }
+	}
+	@else if $point == desktop {
+		@media (max-width: 1920px) { @content ; }
+	}
+	@else if $point == laptop {
+		@media (max-width: 1660px) { @content ; }
+	}
+	@else if $point == laptopSmall {
+		@media (max-width: 1439px) { @content ; }
+	}
+	@else if $point == tabletHor{
+		@media (max-width: 1279px) { @content ; }
+	}
+	@else if $point == tabletVer {
+		@media (max-width: 1015px)  { @content ; }
+	}
+	@else if $point == mobileLarge {
+		@media (max-width: 765px)  { @content ; }
+		//@media (max-width: 784px)  { @content ; }
+	}
+	@else if $point == iPhonePlus {
+		@media (max-width: 414px)  { @content ; }
+	}
+	@else if $point == mobileDefault {
+		@media (max-width: 375px)  { @content ; }
+	}
+	@else if $point == mobileSmall {
+		@media (max-width: 320px)  { @content ; }
+	}
+}
+
+@mixin breakpointHeight($point) {
+	@if $point == desktop2k {
+		@media (min-height: 1440px) { @content ; }
+	}
+}	
+
+@mixin breakpointHeight($point) {
+	@if $point == underFullHD {
+		@media (min-height: 1079px) { @content ; }
+	}
+}
+

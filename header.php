@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<?php do_action('meta'); ?> 
+<?php do_action('meta'); ?>
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> 
 <?php wp_head(); ?>
 <?php do_action('analytics'); ?> 
 </head>
